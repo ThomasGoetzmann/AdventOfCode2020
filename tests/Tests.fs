@@ -29,5 +29,9 @@ let ``Day 2 Part 2: Number of valid passwords (toboggan corporate password polic
     SolveDay2Part2 |> should equal 275
 
 [<Fact>]
-let ``Day 3 Part 1: Number of trees hit with slope (X= 3; Y= 1)`` () =
+let ``Day 3 Part 1: Number of trees hit with slope {X=3; Y=1}`` () =
     SolveDay3Part1 |> should equal 209
+
+[<Fact>]
+let ``Day 3 Part 2: Multiply treesHit when going down the five slopes {X=1; Y=1} {X=3; Y=1} {X=5; Y=1} {X=7; Y=1} {X=1; Y=2}`` () =
+    SolveDay3Part2 |> should equal 1574890240
