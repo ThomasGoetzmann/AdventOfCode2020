@@ -20,5 +20,9 @@ let ``Day 1 Part 2: Mutiplied triplet where the triplet is equal to 2020`` () =
     SolveDay1Part2 |> should equal 212481360
 
 [<Fact>]
-let ``Day 2 Part 1: Number of valid passwords (having right amount of characters)`` () =
+let ``Day 2 Part 1: Number of valid passwords (old rental shop password policy)`` () =
     SolveDay2Part1 |> should equal 546
+
+[<Fact>]
+let ``Day 2 Part 1: Number of valid passwords (toboggan corporate password policy)`` () =
+    SolveDay2Part2 |> should equal 275
