@@ -8,6 +8,7 @@
     <Compile Include="src/Year2020Day1.fs" />
     <Compile Include="src/Year2020Day2.fs" />
     <Compile Include="src/Year2020Day3.fs" />
+    <Compile Include="src/Year2020Day4.fs" />
     <Compile Include="src/Program.fs" />
     <Content Include="inputs/*.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
