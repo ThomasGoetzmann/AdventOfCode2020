@@ -9,6 +9,7 @@ open Year2020Day2
 open Year2020Day3
 open Year2020Day4
 open Year2020Day5
+open Year2020Day6
 
 [<Fact>]
 let ``Day 1 Part 1: Mutiplied pair where the pair is equal to 2020`` () =
@@ -53,3 +54,7 @@ let ``Day 5 Part 1: Highest seat id`` () =
 [<Fact>]
 let ``Day 5 Part 2: Your seat id`` () =
     SolveDay5Part2 |> should equal 583
+
+[<Fact>]
+let ``Day 6 Part 1: Sum of questions where ANYONE answered yes`` () =
+    SolveDay6Part1 |> should equal 6714
