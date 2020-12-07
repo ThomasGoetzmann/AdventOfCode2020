@@ -58,3 +58,7 @@ let ``Day 5 Part 2: Your seat id`` () =
 [<Fact>]
 let ``Day 6 Part 1: Sum of questions where ANYONE answered yes`` () =
     SolveDay6Part1 |> should equal 6714
+
+[<Fact>]
+let ``Day 7 Part 1: Sum of questions where EVERYONE answered yes`` () =
+    SolveDay6Part2 |> should equal 3435

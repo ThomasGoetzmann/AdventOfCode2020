@@ -12,17 +12,25 @@ let parseLines (input: string) =
 
     input.Split separator
 
-let yesAnswers (s:string) = 
+
+let anyoneAnsweredYes (s:string) = 
     s 
     |> Seq.distinct
     |> Seq.filter (fun x -> x <> '\r' && x <> '\n' && x <> ' ')
 
+let everyoneAnsweredYes (s:string) =
+    s.Split Environment.NewLine 
+    |> Seq.map Set.ofSeq
+    |> Seq.reduce Set.intersect
 
 let SolveDay6Part1 =
     inputs 
     |> parseLines
-    |> Seq.map (yesAnswers >> Seq.length)
+    |> Seq.map (anyoneAnsweredYes >> Seq.length)
     |> Seq.sum
 
 let SolveDay6Part2 =
-    0
+    inputs 
+    |> parseLines
+    |> Seq.map (everyoneAnsweredYes >> Seq.length)
+    |> Seq.sum
