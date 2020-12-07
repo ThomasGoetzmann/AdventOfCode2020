@@ -8,6 +8,7 @@ open Year2020Day1
 open Year2020Day2
 open Year2020Day3
 open Year2020Day4
+open Year2020Day5
 
 [<Fact>]
 let ``Day 1 Part 1: Mutiplied pair where the pair is equal to 2020`` () =
@@ -44,3 +45,11 @@ let ``Day 4 Part 1: Number of passwords with required fields`` () =
 [<Fact>]
 let ``Day 4 Part 2: Number of valid passwords (fields + rules)`` () =
     SolveDay4Part2 |> should equal 103
+
+[<Fact>]
+let ``Day 5 Part 1: Highest seat id`` () =
+    SolveDay5Part1 |> should equal 866
+
+[<Fact>]
+let ``Day 5 Part 2: Your seat id`` () =
+    SolveDay5Part2 |> should equal 583
