@@ -21,12 +21,14 @@ jobs:
       run: dotnet restore ./tests
   
   build:
+    needs: [restore]
     runs-on: ubuntu-latest
     steps:
     - name: Build tests
       run: dotnet build --configuration Release --no-restore
   
   test:
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
     - name: Run tests
