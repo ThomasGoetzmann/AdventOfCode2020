@@ -65,5 +65,5 @@ let ``Day 6 Part 2: Sum of questions where EVERYONE answered yes`` () =
     SolveDay6Part2 |> should equal 3435
 
 [<Fact>]
-let ``Day 8 Part 1: Sum of questions where EVERYONE answered yes`` () =
+let ``Day 8 Part 1: Accumulated value just before first instruction repeat`` () =
     SolveDay8Part1 |> should equal 1487
