@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  restore:
+  ci_pipeline:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -18,19 +18,9 @@ jobs:
     - name: Restore project dependencies 
       run: dotnet restore
     - name: Restore test project dependencies
-      run: dotnet restore ./tests
-  
-  build:
-    needs: [restore]
-    runs-on: ubuntu-latest
-    steps:
-    - name: Build tests
+      run: dotnet restore ./tests 
+    - name: Build
       run: dotnet build --configuration Release --no-restore
-  
-  test:
-    needs: [build]
-    runs-on: ubuntu-latest
-    steps:
-    - name: Run tests
-      run: dotnet test --nologo --no-restore --verbosity normal
+    - name: Tests
+      run: dotnet test --nologo --no-restore --verbosity normal ./tests
         
