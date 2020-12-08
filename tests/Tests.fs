@@ -10,6 +10,7 @@ open Year2020Day3
 open Year2020Day4
 open Year2020Day5
 open Year2020Day6
+open Year2020Day8
 
 [<Fact>]
 let ``Day 1 Part 1: Mutiplied pair where the pair is equal to 2020`` () =
@@ -60,5 +61,9 @@ let ``Day 6 Part 1: Sum of questions where ANYONE answered yes`` () =
     SolveDay6Part1 |> should equal 6714
 
 [<Fact>]
-let ``Day 7 Part 1: Sum of questions where EVERYONE answered yes`` () =
+let ``Day 6 Part 2: Sum of questions where EVERYONE answered yes`` () =
     SolveDay6Part2 |> should equal 3435
+
+[<Fact>]
+let ``Day 8 Part 1: Sum of questions where EVERYONE answered yes`` () =
+    SolveDay8Part1 |> should equal 1487
