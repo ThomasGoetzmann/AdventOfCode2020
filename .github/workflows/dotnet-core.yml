@@ -7,10 +7,8 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-
+  restore:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET Core
@@ -21,8 +19,16 @@ jobs:
       run: dotnet restore
     - name: Restore test project dependencies
       run: dotnet restore ./tests
-    - name: Build
+  
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Build tests
       run: dotnet build --configuration Release --no-restore
-    - name: Test
+  
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run tests
       run: dotnet test --nologo --no-restore --verbosity normal
         
