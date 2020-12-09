@@ -115,7 +115,7 @@ let runAllPossibleFixes (operations: List<Operation>) =
 
         let modifiedOperations =
             operations
-            |> List.mapi (fun i o -> if i = i then modifyOperation o else o)
+            |> List.mapi (fun i o -> if i = index then modifyOperation o else o)
 
         (modifiedOperations, index)
 
