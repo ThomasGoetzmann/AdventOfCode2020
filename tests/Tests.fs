@@ -66,4 +66,8 @@ let ``Day 6 Part 2: Sum of questions where EVERYONE answered yes`` () =
 
 [<Fact>]
 let ``Day 8 Part 1: Accumulated value just before first instruction repeat`` () =
-    SolveDay8Part1 |> should equal 1487
+    SolveDay8Part1.Count |> should equal 1487
+
+[<Fact>]
+let ``Day 8 Part 2: Accumulated value for fixed program (1 Nop modified to Jmp or 1 Jmp modified to Nop)`` () =
+    SolveDay8Part2.Count |> should equal 1607
