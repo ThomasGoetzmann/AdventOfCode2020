@@ -8,6 +8,7 @@ open Year2020Day5
 open Year2020Day6
 open Year2020Day8
 open Year2020Day9
+open Year2020Day10
 
 [<EntryPoint>]
 let main argv =
@@ -34,4 +35,7 @@ let main argv =
     printfn "---"
     printfn "Day 9 part 1 solution is %A" SolveDay9Part1
     printfn "Day 9 part 2 solution is %A" SolveDay9Part2
+    printfn "---"
+    printfn "Day 10 part 1 solution is %A" SolveDay10Part1
+    printfn "Day 10 part 2 solution is %A" SolveDay10Part2
     0

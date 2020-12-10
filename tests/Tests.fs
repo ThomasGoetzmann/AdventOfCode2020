@@ -12,6 +12,7 @@ open Year2020Day5
 open Year2020Day6
 open Year2020Day8
 open Year2020Day9
+open Year2020Day10
 
 [<Fact>]
 let ``Day 1 Part 1: Mutiplied pair where the pair is equal to 2020`` () =
@@ -80,3 +81,7 @@ let ``Day 9 Part 1: Number for which the sum of 2 numbers in the 25 preceding nu
 [<Fact>]
 let ``Day 9 Part 2: Sum of Min and Max of continuous numbers equal to Day9Part1 Answer`` () =
     SolveDay9Part2 |> fun (a,b) -> a + b |> should equal 55732936UL
+
+[<Fact>]
+let ``Day 10 Part 1: Jolt1 * Jolt3`` () =
+    SolveDay10Part1 |> should equal 2760
