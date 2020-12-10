@@ -11,6 +11,7 @@ open Year2020Day4
 open Year2020Day5
 open Year2020Day6
 open Year2020Day8
+open Year2020Day9
 
 [<Fact>]
 let ``Day 1 Part 1: Mutiplied pair where the pair is equal to 2020`` () =
@@ -71,3 +72,11 @@ let ``Day 8 Part 1: Accumulated value just before first instruction repeat`` () 
 [<Fact>]
 let ``Day 8 Part 2: Accumulated value for fixed program (1 Nop modified to Jmp or 1 Jmp modified to Nop)`` () =
     SolveDay8Part2.Count |> should equal 1607
+
+[<Fact>]
+let ``Day 9 Part 1: Number for which the sum of 2 numbers in the 25 preceding numbers is not equal`` () =
+    SolveDay9Part1 |> should equal 466456641UL
+
+[<Fact>]
+let ``Day 9 Part 2: Sum of Min and Max of continuous numbers equal to Day9Part1 Answer`` () =
+    SolveDay9Part2 |> fun (a,b) -> a + b |> should equal 55732936UL
