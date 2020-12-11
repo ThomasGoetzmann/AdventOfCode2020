@@ -26,11 +26,9 @@ let everyoneAnsweredYes (s:string) =
 let SolveDay6Part1 =
     inputs 
     |> parseLines
-    |> Seq.map (anyoneAnsweredYes >> Seq.length)
-    |> Seq.sum
+    |> Seq.sumBy (anyoneAnsweredYes >> Seq.length)
 
 let SolveDay6Part2 =
     inputs 
     |> parseLines
-    |> Seq.map (everyoneAnsweredYes >> Seq.length)
-    |> Seq.sum
+    |> Seq.sumBy (everyoneAnsweredYes >> Seq.length)
