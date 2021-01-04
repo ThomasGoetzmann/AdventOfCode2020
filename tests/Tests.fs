@@ -13,6 +13,7 @@ open Year2020Day6
 open Year2020Day8
 open Year2020Day9
 open Year2020Day10
+open Year2020Day11
 
 [<Fact>]
 let ``Day 1 Part 1: Mutiplied pair where the pair is equal to 2020`` () =
@@ -85,3 +86,7 @@ let ``Day 9 Part 2: Sum of Min and Max of continuous numbers equal to Day9Part1 
 [<Fact>]
 let ``Day 10 Part 1: Jolt1 * Jolt3`` () =
     SolveDay10Part1 |> should equal 2760
+
+[<Fact>]
+let ``Day 11 Part 1: Occupied seats after no more changes occurs`` () =
+    SolveDay11Part1 |> should equal 2494
