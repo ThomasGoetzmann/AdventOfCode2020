@@ -42,5 +42,5 @@ let main argv =
     printfn "Day 10 part 2 solution is %A" SolveDay10Part2 //Incomplete
     printfn "---"
     printfn "Day 11 part 1 solution is %A" SolveDay11Part1
-    printfn "Day 11 part 2 solution is %A" SolveDay11Part2 //Incomplete
+    printfn "Day 11 part 2 solution is %A" SolveDay11Part2 
     0

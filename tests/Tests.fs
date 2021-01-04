@@ -90,3 +90,7 @@ let ``Day 10 Part 1: Jolt1 * Jolt3`` () =
 [<Fact>]
 let ``Day 11 Part 1: Occupied seats after no more changes occurs`` () =
     SolveDay11Part1 |> should equal 2494
+
+[<Fact>]
+let ``Day 11 Part 2: Occupied seats after no more changes with new rules`` () =
+    SolveDay11Part2 |> should equal 2306
