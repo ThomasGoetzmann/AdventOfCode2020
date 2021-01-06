@@ -10,6 +10,7 @@ open Year2020Day3
 open Year2020Day4
 open Year2020Day5
 open Year2020Day6
+open Year2020Day7
 open Year2020Day8
 open Year2020Day9
 open Year2020Day10
@@ -66,6 +67,10 @@ let ``Day 6 Part 1: Sum of questions where ANYONE answered yes`` () =
 [<Fact>]
 let ``Day 6 Part 2: Sum of questions where EVERYONE answered yes`` () =
     SolveDay6Part2 |> should equal 3435
+
+[<Fact>]
+let ``Day 7 Part 1: All bag colors which can contain a 'shiny gold' bag`` () =
+    SolveDay7Part1 |> should equal 372
 
 [<Fact>]
 let ``Day 8 Part 1: Accumulated value just before first instruction repeat`` () =
