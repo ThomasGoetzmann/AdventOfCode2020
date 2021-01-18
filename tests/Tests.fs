@@ -15,6 +15,7 @@ open Year2020Day8
 open Year2020Day9
 open Year2020Day10
 open Year2020Day11
+open Year2020Day12
 
 [<Fact>]
 let ``Day 1 Part 1: Mutiplied pair where the pair is equal to 2020`` () =
@@ -103,3 +104,7 @@ let ``Day 11 Part 1: Occupied seats after no more changes occurs`` () =
 [<Fact>]
 let ``Day 11 Part 2: Occupied seats after no more changes with new rules`` () =
     SolveDay11Part2 |> should equal 2306
+
+[<Fact>]
+let ``Day 12 Part 1: Manhattan distance of ships end position`` () =
+    SolveDay12Part1 |> should equal 1319
