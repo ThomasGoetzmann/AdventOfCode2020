@@ -41,8 +41,8 @@ let contentColors (bag: Bag) =
     |> Seq.map (fun content -> content.Color)
     |> List.ofSeq
 
-let rec findAllColorsWhichCanContain (color: string) (bags: seq<Bag>) =
-    let rec findColorsAcc (color: string) (bags: seq<Bag>) (colors: List<string>) =
+let rec findAllColorsWhichCanContain (color: Color) (bags: seq<Bag>) =
+    let rec findColorsAcc (color: Color) (bags: seq<Bag>) (colors: List<string>) =
         let newColors =
             bags
             |> Seq.filter (fun elem ->
@@ -60,10 +60,31 @@ let rec findAllColorsWhichCanContain (color: string) (bags: seq<Bag>) =
 
     findColorsAcc color bags []
 
+let bagsAmountInColor (color: Color) (bags: seq<Bag>) =
+    let rec bagsInBag (color: Color) (bags: seq<Bag>) (amount: int) (multiplicator : int) =
+        let bag =
+            bags |> Seq.find (fun b -> b.Color = color)
+
+        let isBagEmpty = 
+            bag.Contents
+            |> Seq.filter (fun c -> c.Color <> "none")
+            |> Seq.isEmpty
+
+        if isBagEmpty then
+            amount
+        else
+            bag.Contents
+            |> Seq.fold (fun acc elem -> bagsInBag elem.Color bags (acc + (multiplicator * elem.Amount)) (multiplicator * elem.Amount)) amount
+
+    bagsInBag color bags 0 1 
+
 let SolveDay7Part1 =
     inputs
     |> Seq.map parse
     |> findAllColorsWhichCanContain "shiny gold"
     |> List.length
 
-let SolveDay7Part2 = 0
+let SolveDay7Part2 =
+    inputs
+    |> Seq.map parse
+    |> bagsAmountInColor "shiny gold"

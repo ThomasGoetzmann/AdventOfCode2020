@@ -73,6 +73,10 @@ let ``Day 7 Part 1: All bag colors which can contain a 'shiny gold' bag`` () =
     SolveDay7Part1 |> should equal 372
 
 [<Fact>]
+let ``Day 7 Part 2: Amount of bags contained in a 'shiny gold' bag`` () =
+    SolveDay7Part2 |> should equal 8015
+
+[<Fact>]
 let ``Day 8 Part 1: Accumulated value just before first instruction repeat`` () =
     SolveDay8Part1.Count |> should equal 1487
 
