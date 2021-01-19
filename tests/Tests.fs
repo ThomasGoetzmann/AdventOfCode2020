@@ -108,3 +108,7 @@ let ``Day 11 Part 2: Occupied seats after no more changes with new rules`` () =
 [<Fact>]
 let ``Day 12 Part 1: Manhattan distance of ships end position`` () =
     SolveDay12Part1 |> should equal 1319
+
+[<Fact>]
+let ``Day 12 Part 2: Manhattan distance of ships end position when using a Waypoint`` () =
+    SolveDay12Part2 |> should equal 62434
